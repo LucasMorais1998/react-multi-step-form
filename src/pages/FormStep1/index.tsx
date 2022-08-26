@@ -64,6 +64,7 @@ const FormStep1 = () => {
                 state.name = String(this.value);
                 handleNameChange(e.target.value);
               },
+              value: `${state.name !== "" ? state.name : ""}`,
             })}
           />
           <span style={{ visibility: `${errors.name ? "visible" : "hidden"}` }}>
