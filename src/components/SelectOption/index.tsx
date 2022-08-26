@@ -4,11 +4,19 @@ export interface ISelectOptionsProps {
   title: string;
   description: string;
   icon: string;
+  selected: boolean;
+  onClick: () => void;
 }
 
-const SelectOption = ({ title, description, icon }: ISelectOptionsProps) => {
+const SelectOption = ({
+  title,
+  description,
+  icon,
+  selected,
+  onClick,
+}: ISelectOptionsProps) => {
   return (
-    <Container>
+    <Container selected={selected} onClick={onClick}>
       <Icon>{icon}</Icon>
       <Info>
         <Title>{title}</Title>
