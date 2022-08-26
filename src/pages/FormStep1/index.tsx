@@ -1,10 +1,47 @@
+import { useEffect } from "react";
+
+import { useForm } from "../../hooks/useForm";
+
+import { useNavigate } from "react-router-dom";
+
+import { SubmitHandler, useForm as useFormRHF } from "react-hook-form";
+
+import { FormActions } from "../../enums/FormActions";
+
 import Theme from "../../components/Theme";
 
 import { Container } from "./styles";
 
-const FormStep1 = () => {
-  const handleNextStep = () => {
+interface IInputNameData {
+  name: string;
+}
 
+const FormStep1 = () => {
+  const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useFormRHF<IInputNameData>();
+
+  const { state, dispatch } = useForm();
+
+  useEffect(() => {
+    dispatch({
+      type: FormActions.setCurrentStep,
+      payload: 1,
+    });
+  }, []);
+
+  const handleNextStep: SubmitHandler<IInputNameData> = () => {
+    if (state.name !== "") navigate("/step2");
+  };
+
+  const handleNameChange = (name: string) => {
+    dispatch({
+      type: FormActions.setName,
+      payload: name,
+    });
   };
 
   return (
@@ -17,10 +54,24 @@ const FormStep1 = () => {
 
         <label>
           Seu nome completo
-          <input type="text" autoFocus />
+          <input
+            type="text"
+            autoFocus
+            {...register("name", {
+              required: true,
+              onChange(e) {
+                this.value = e.target.value;
+                state.name = String(this.value);
+                handleNameChange(e.target.value);
+              },
+            })}
+          />
+          <span style={{ visibility: `${errors.name ? "visible" : "hidden"}` }}>
+            Preencha o nome completo!
+          </span>
         </label>
 
-        <button onClick={handleNextStep}>Próximo</button>
+        <button onClick={handleSubmit(handleNextStep)}>Próximo</button>
       </Container>
     </Theme>
   );
