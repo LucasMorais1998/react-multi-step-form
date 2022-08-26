@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const MainContent = styled.div`
-  margin: 0 auto;
+  margin: auto;
   max-width: 980px;
   min-height: 100vh;
   display: flex;
