@@ -13,5 +13,6 @@ export const Container = styled.header`
   p {
     font-size: 0.875;
     color: var(--purple-100);
+    margin: 1rem 0;
   }
 `;
