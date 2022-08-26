@@ -26,6 +26,7 @@ export const Container = styled.div`
 
   label {
     font-size: 0.813rem;
+    min-height: 400px;
 
     input {
       display: block;
@@ -38,6 +39,12 @@ export const Container = styled.div`
       outline: none;
       font-size: 0.938rem;
       background-color: var(--blue-500);
+      
+    }
+
+    span {
+      display: block;
+      color: var(--red);
     }
   }
 
