@@ -61,8 +61,7 @@ export const Point = styled.div<IPointProps>`
   padding: 0.375rem;
   border: 3px solid var(--purple-500);
   border-radius: 50%;
-  margin-left: 1.875rem;
-  margin-right: -0.59rem;
+  margin-left: 1.95rem;
   cursor: pointer;
   z-index: 2;
   position: absolute;
