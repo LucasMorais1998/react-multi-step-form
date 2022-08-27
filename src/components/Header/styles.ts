@@ -11,7 +11,7 @@ export const Container = styled.header`
   }
 
   p {
-    font-size: 0.875;
+    font-size: 0.875rem;
     color: var(--purple-100);
     margin: 1rem 0;
   }
