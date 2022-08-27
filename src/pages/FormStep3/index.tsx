@@ -109,7 +109,7 @@ const FormStep3 = () => {
         <Link to="/step2" className="back-button">
           Voltar
         </Link>
-        <button onClick={handleSubmit(handleNextStep)}>Próximo</button>
+        <button onClick={handleSubmit(handleNextStep)}>Finalizar Cadastro</button>
       </Container>
     </Theme>
   );
