@@ -39,7 +39,6 @@ export const Container = styled.div`
       outline: none;
       font-size: 0.938rem;
       background-color: var(--blue-500);
-      
     }
 
     span {
@@ -57,6 +56,7 @@ export const Container = styled.div`
     border: 0;
     border-radius: 1.875rem;
     margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
   }
 
   .back-button {
