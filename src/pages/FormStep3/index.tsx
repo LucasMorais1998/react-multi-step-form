@@ -36,8 +36,13 @@ const FormStep3 = () => {
     });
   }, []);
 
-  const handleNextStep: SubmitHandler<IInputNameData> = () => {
-    console.log(state);
+  const handleCompletedForm: SubmitHandler<IInputNameData> = () => {
+    const hasAllRequeridData = [state.name, state.email, state.github].every(
+      (item) => item
+    );
+
+    if (hasAllRequeridData) navigate("/completed");
+    console.log(state)
   };
 
   const handleEmailChange = (email: string) => {
@@ -109,7 +114,7 @@ const FormStep3 = () => {
         <Link to="/step2" className="back-button">
           Voltar
         </Link>
-        <button onClick={handleSubmit(handleNextStep)}>
+        <button onClick={handleSubmit(handleCompletedForm)}>
           Finalizar Cadastro
         </button>
       </Container>
