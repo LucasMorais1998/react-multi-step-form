@@ -6,18 +6,17 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { FormActions } from "../../enums/FormActions";
 
-import SelectOption, {
+import {
   ISelectOptionsProps,
+  SelectOption,
 } from "../../components/SelectOption";
-import Theme from "../../components/Theme";
+import { Theme } from "../../components/Theme";
 
 import { Container } from "./styles";
 
 type OptionsTypeOmited = Omit<ISelectOptionsProps, "selected" | "onClick">;
 
-interface OptionsType extends OptionsTypeOmited {
-  level: number;
-}
+type OptionsType = OptionsTypeOmited & { level: number };
 
 const options: OptionsType[] = [
   {
@@ -96,4 +95,4 @@ const FormStep2 = () => {
   );
 };
 
-export default FormStep2;
+export { FormStep2 };
