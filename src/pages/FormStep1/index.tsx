@@ -4,7 +4,7 @@ import { useForm } from "../../hooks/useForm";
 
 import { useNavigate } from "react-router-dom";
 
-import { SubmitHandler, useForm as useFormRHF } from "react-hook-form";
+import { SubmitHandler, useForm as useReactHookForm } from "react-hook-form";
 
 import { FormActions } from "../../enums/FormActions";
 
@@ -22,7 +22,7 @@ const FormStep1 = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useFormRHF<IInputNameData>();
+  } = useReactHookForm<IInputNameData>();
 
   const { state, dispatch } = useForm();
 
