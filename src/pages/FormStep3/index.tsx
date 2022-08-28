@@ -42,7 +42,6 @@ const FormStep3 = () => {
     );
 
     if (hasAllRequeridData) navigate("/completed");
-    console.log(state)
   };
 
   const handleEmailChange = (email: string) => {
