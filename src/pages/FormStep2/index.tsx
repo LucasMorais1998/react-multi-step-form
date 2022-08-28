@@ -18,7 +18,7 @@ type OptionsTypeOmited = Omit<ISelectOptionsProps, "selected" | "onClick">;
 
 type OptionsType = OptionsTypeOmited & { level: number };
 
-const options: OptionsType[] = [
+export const options: OptionsType[] = [
   {
     title: "Sou Junior",
     description: "Programo há menos de 1 ano.",
@@ -33,7 +33,7 @@ const options: OptionsType[] = [
   },
   {
     title: "Sou Sênior",
-    description: "Programo há mais de 5 anos",
+    description: "Programo há mais de 5 anos.",
     icon: "👴",
     level: 2,
   },
