@@ -70,4 +70,4 @@ const SidebarItem = () => {
   );
 };
 
-export default SidebarItem;
+export { SidebarItem };

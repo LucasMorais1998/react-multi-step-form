@@ -22,9 +22,5 @@ export const FormProvider = ({ children }: IFormProviderProps) => {
   const [state, dispatch] = useReducer(FormReducer, initialData);
   const value = { state, dispatch };
 
-  return (
-    <FormContext.Provider value={value}>
-      {children}
-    </FormContext.Provider>
-  );
+  return <FormContext.Provider value={value}>{children}</FormContext.Provider>;
 };

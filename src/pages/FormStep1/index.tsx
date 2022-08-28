@@ -8,7 +8,7 @@ import { SubmitHandler, useForm as useFormRHF } from "react-hook-form";
 
 import { FormActions } from "../../enums/FormActions";
 
-import Theme from "../../components/Theme";
+import { Theme } from "../../components/Theme";
 
 import { Container } from "./styles";
 
@@ -78,4 +78,4 @@ const FormStep1 = () => {
   );
 };
 
-export default FormStep1;
+export { FormStep1 };

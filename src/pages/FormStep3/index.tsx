@@ -8,7 +8,7 @@ import { SubmitHandler, useForm as useFormRHF } from "react-hook-form";
 
 import { FormActions } from "../../enums/FormActions";
 
-import Theme from "../../components/Theme";
+import { Theme } from "../../components/Theme";
 
 import { Container } from "./styles";
 
@@ -109,10 +109,12 @@ const FormStep3 = () => {
         <Link to="/step2" className="back-button">
           Voltar
         </Link>
-        <button onClick={handleSubmit(handleNextStep)}>Finalizar Cadastro</button>
+        <button onClick={handleSubmit(handleNextStep)}>
+          Finalizar Cadastro
+        </button>
       </Container>
     </Theme>
   );
 };
 
-export default FormStep3;
+export { FormStep3 };

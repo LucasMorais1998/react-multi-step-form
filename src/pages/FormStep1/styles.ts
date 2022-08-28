@@ -39,7 +39,6 @@ export const Container = styled.div`
       outline: none;
       font-size: 0.938rem;
       background-color: var(--blue-500);
-      
     }
 
     span {
