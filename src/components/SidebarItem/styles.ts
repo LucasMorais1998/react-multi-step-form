@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   margin: 1.875rem 0;
@@ -43,8 +43,7 @@ export const Icon = styled.div<IIconProps>`
   width: 3.125rem;
   height: 3.125rem;
   border-radius: 50%;
-  background-color: ${(props) =>
-    props.active ? "var(--green-500)" : "var(--purple-500)"};
+  background-color: ${props => (props.active ? 'var(--green-500)' : 'var(--purple-500)')};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,6 +64,5 @@ export const Point = styled.div<IPointProps>`
   cursor: pointer;
   z-index: 2;
   position: absolute;
-  background-color: ${(props) =>
-    props.active ? "var(--green-500)" : "var(--blue-500)"};
+  background-color: ${props => (props.active ? 'var(--green-500)' : 'var(--blue-500)')};
 `;

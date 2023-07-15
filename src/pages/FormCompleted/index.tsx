@@ -1,12 +1,12 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-import { useForm } from "../../hooks/useForm";
+import { useForm } from '../../hooks/useForm';
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
-import { options } from "../FormStep2";
+import { options } from '../FormStep2';
 
-import { Container } from "./styles";
+import { Container } from './styles';
 
 const FormCompleted = () => {
   const navigate = useNavigate();
@@ -14,11 +14,9 @@ const FormCompleted = () => {
   const { state, dispatch } = useForm();
 
   useEffect(() => {
-    const hasAllRequeridData = [state.name, state.email, state.github].every(
-      (item) => item
-    );
+    const hasAllRequeridData = [state.name, state.email, state.github].every(item => item);
 
-    if (!hasAllRequeridData) navigate("/");
+    if (!hasAllRequeridData) navigate('/');
   }, []);
 
   return (
@@ -31,7 +29,7 @@ const FormCompleted = () => {
           Nome: <span>{state.name}</span>
         </p>
         <p>
-          Nível:{" "}
+          Nível:{' '}
           <span>
             {`${options[state.level].icon} ${options[state.level].title} - ${
               options[state.level].description
@@ -42,14 +40,14 @@ const FormCompleted = () => {
           E-mail: <span>{state.email}</span>
         </p>
         <p>
-          GitHub: <span>{state.github.split("https://github.com/")}</span>
+          GitHub: <span>{state.github.split('https://github.com/')}</span>
         </p>
         <hr />
       </div>
 
       <h3>
-        {state.name}, obrigado por seu interesse em nossos processos, fique
-        atento ao e-mail informado, entraremos em contato em breve.
+        {state.name}, obrigado por seu interesse em nossos processos, fique atento ao e-mail
+        informado, entraremos em contato em breve.
       </h3>
     </Container>
   );

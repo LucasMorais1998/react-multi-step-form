@@ -1,21 +1,13 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import { useForm } from "../../hooks/useForm";
+import { useForm } from '../../hooks/useForm';
 
-import { FaUserAlt } from "react-icons/fa";
-import { MdEmail, MdWork } from "react-icons/md";
+import { FaUserAlt } from 'react-icons/fa';
+import { MdEmail, MdWork } from 'react-icons/md';
 
-import {
-  Container,
-  Description,
-  Icon,
-  Info,
-  MainContent,
-  Point,
-  Title,
-} from "./styles";
+import { Container, Description, Icon, Info, MainContent, Point, Title } from './styles';
 
 type SidebarItemOptionsTypes = {
   title: string;
@@ -26,22 +18,22 @@ type SidebarItemOptionsTypes = {
 
 const sidebarItemOptions: SidebarItemOptionsTypes[] = [
   {
-    title: "Pessoal",
-    description: "Se identifique",
+    title: 'Pessoal',
+    description: 'Se identifique',
     icon: <FaUserAlt />,
-    path: "/",
+    path: '/',
   },
   {
-    title: "Profissional",
-    description: "Seu nível",
+    title: 'Profissional',
+    description: 'Seu nível',
     icon: <MdWork />,
-    path: "/step2",
+    path: '/step2',
   },
   {
-    title: "Contatos",
-    description: "Como te achar",
+    title: 'Contatos',
+    description: 'Como te achar',
     icon: <MdEmail />,
-    path: "/step3",
+    path: '/step3',
   },
 ];
 

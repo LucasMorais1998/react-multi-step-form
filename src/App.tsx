@@ -1,8 +1,8 @@
-import { FormProvider } from "./providers/FormProvider";
+import { FormProvider } from './providers/FormProvider';
 
-import { Router } from "./router";
+import { Router } from './router';
 
-import { GlobalStyle } from "./styles/global";
+import { GlobalStyle } from './styles/global';
 
 const App = () => {
   return (

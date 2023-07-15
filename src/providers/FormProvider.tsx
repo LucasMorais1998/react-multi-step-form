@@ -1,10 +1,10 @@
-import { ReactNode, useReducer } from "react";
+import { ReactNode, useReducer } from 'react';
 
-import { FormContext } from "../contexts/FormContext";
+import { FormContext } from '../contexts/FormContext';
 
-import { FormReducer } from "../reducers/FormReducer";
+import { FormReducer } from '../reducers/FormReducer';
 
-import { State } from "../types/State";
+import { State } from '../types/State';
 
 interface IFormProviderProps {
   children: ReactNode;
@@ -12,10 +12,10 @@ interface IFormProviderProps {
 
 const initialData: State = {
   currentStep: 0,
-  name: "",
+  name: '',
   level: 0,
-  email: "",
-  github: "",
+  email: '',
+  github: '',
 };
 
 export const FormProvider = ({ children }: IFormProviderProps) => {

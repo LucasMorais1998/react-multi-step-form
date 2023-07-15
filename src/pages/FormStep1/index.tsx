@@ -1,16 +1,16 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-import { useForm } from "../../hooks/useForm";
+import { useForm } from '../../hooks/useForm';
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
-import { SubmitHandler, useForm as useReactHookForm } from "react-hook-form";
+import { SubmitHandler, useForm as useReactHookForm } from 'react-hook-form';
 
-import { FormActions } from "../../enums/FormActions";
+import { FormActions } from '../../enums/FormActions';
 
-import { Theme } from "../../components/Theme";
+import { Theme } from '../../components/Theme';
 
-import { Container } from "./styles";
+import { Container } from './styles';
 
 interface IInputNameData {
   name: string;
@@ -34,7 +34,7 @@ const FormStep1 = () => {
   }, []);
 
   const handleNextStep: SubmitHandler<IInputNameData> = () => {
-    if (state.name !== "") navigate("/step2");
+    if (state.name !== '') navigate('/step2');
   };
 
   const handleNameChange = (name: string) => {
@@ -57,17 +57,17 @@ const FormStep1 = () => {
           <input
             type="text"
             autoFocus
-            {...register("name", {
+            {...register('name', {
               required: true,
               onChange(e) {
                 this.value = e.target.value;
                 state.name = String(this.value);
                 handleNameChange(e.target.value);
               },
-              value: `${state.name !== "" ? state.name : ""}`,
+              value: `${state.name !== '' ? state.name : ''}`,
             })}
           />
-          <span style={{ visibility: `${errors.name ? "visible" : "hidden"}` }}>
+          <span style={{ visibility: `${errors.name ? 'visible' : 'hidden'}` }}>
             Preencha o nome completo!
           </span>
         </label>

@@ -1,7 +1,7 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
-import { Action } from "../types/Action";
-import { State } from "../types/State";
+import { Action } from '../types/Action';
+import { State } from '../types/State';
 
 type ContextType = {
   state: State;

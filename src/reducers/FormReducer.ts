@@ -1,7 +1,7 @@
-import { FormActions } from "../enums/FormActions";
+import { FormActions } from '../enums/FormActions';
 
-import { Action } from "../types/Action";
-import { State } from "../types/State";
+import { Action } from '../types/Action';
+import { State } from '../types/State';
 
 export const FormReducer = (state: State, action: Action) => {
   switch (action.type) {

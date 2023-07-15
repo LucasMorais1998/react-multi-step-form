@@ -1,4 +1,4 @@
-import { FormActions } from "../enums/FormActions";
+import { FormActions } from '../enums/FormActions';
 
 export type Action = {
   type: FormActions;

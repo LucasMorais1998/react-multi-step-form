@@ -1,16 +1,16 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-import { useForm } from "../../hooks/useForm";
+import { useForm } from '../../hooks/useForm';
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
 
-import { SubmitHandler, useForm as useReactHookForm } from "react-hook-form";
+import { SubmitHandler, useForm as useReactHookForm } from 'react-hook-form';
 
-import { FormActions } from "../../enums/FormActions";
+import { FormActions } from '../../enums/FormActions';
 
-import { Theme } from "../../components/Theme";
+import { Theme } from '../../components/Theme';
 
-import { Container } from "./styles";
+import { Container } from './styles';
 
 interface IInputNameData {
   email: string;
@@ -28,7 +28,7 @@ const FormStep3 = () => {
   const { state, dispatch } = useForm();
 
   useEffect(() => {
-    if (state.name === "") navigate("/");
+    if (state.name === '') navigate('/');
 
     dispatch({
       type: FormActions.setCurrentStep,
@@ -37,11 +37,9 @@ const FormStep3 = () => {
   }, []);
 
   const handleCompletedForm: SubmitHandler<IInputNameData> = () => {
-    const hasAllRequeridData = [state.name, state.email, state.github].every(
-      (item) => item
-    );
+    const hasAllRequeridData = [state.name, state.email, state.github].every(item => item);
 
-    if (hasAllRequeridData) navigate("/completed");
+    if (hasAllRequeridData) navigate('/completed');
   };
 
   const handleEmailChange = (email: string) => {
@@ -71,19 +69,17 @@ const FormStep3 = () => {
           <input
             type="email"
             autoFocus
-            {...register("email", {
+            {...register('email', {
               required: true,
               onChange(e) {
                 this.value = e.target.value;
                 state.email = String(this.value);
                 handleEmailChange(e.target.value);
               },
-              value: `${state.email !== "" ? state.email : ""}`,
+              value: `${state.email !== '' ? state.email : ''}`,
             })}
           />
-          <span
-            style={{ visibility: `${errors.email ? "visible" : "hidden"}` }}
-          >
+          <span style={{ visibility: `${errors.email ? 'visible' : 'hidden'}` }}>
             Preencha e-mail!
           </span>
         </label>
@@ -93,19 +89,17 @@ const FormStep3 = () => {
           <input
             type="url"
             autoFocus
-            {...register("github", {
+            {...register('github', {
               required: true,
               onChange(e) {
                 this.value = e.target.value;
                 state.github = String(this.value);
                 handleGithubChange(e.target.value);
               },
-              value: `${state.github !== "" ? state.github : ""}`,
+              value: `${state.github !== '' ? state.github : ''}`,
             })}
           />
-          <span
-            style={{ visibility: `${errors.github ? "visible" : "hidden"}` }}
-          >
+          <span style={{ visibility: `${errors.github ? 'visible' : 'hidden'}` }}>
             Preencha o GitHub!
           </span>
         </label>
@@ -113,9 +107,7 @@ const FormStep3 = () => {
         <Link to="/step2" className="back-button">
           Voltar
         </Link>
-        <button onClick={handleSubmit(handleCompletedForm)}>
-          Finalizar Cadastro
-        </button>
+        <button onClick={handleSubmit(handleCompletedForm)}>Finalizar Cadastro</button>
       </Container>
     </Theme>
   );

@@ -1,14 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { ISelectOptionsProps } from "./index";
+import { ISelectOptionsProps } from './index';
 
-type ContainerType = Pick<ISelectOptionsProps, "selected">;
+type ContainerType = Pick<ISelectOptionsProps, 'selected'>;
 
 export const Container = styled.div<ContainerType>`
   display: flex;
   align-items: center;
-  border: 2px solid
-    ${(props) => (props.selected ? "var(--green-500)" : "var(--blue-300)")};
+  border: 2px solid ${props => (props.selected ? 'var(--green-500)' : 'var(--blue-300)')};
   border-radius: 0.625rem;
   padding: 1.25rem;
   margin-bottom: 0.938rem;

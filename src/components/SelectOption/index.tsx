@@ -1,4 +1,4 @@
-import { Container, Description, Icon, Info, Title } from "./styles";
+import { Container, Description, Icon, Info, Title } from './styles';
 
 export interface ISelectOptionsProps {
   title: string;
@@ -8,13 +8,7 @@ export interface ISelectOptionsProps {
   onClick: () => void;
 }
 
-const SelectOption = ({
-  title,
-  description,
-  icon,
-  selected,
-  onClick,
-}: ISelectOptionsProps) => {
+const SelectOption = ({ title, description, icon, selected, onClick }: ISelectOptionsProps) => {
   return (
     <Container selected={selected} onClick={onClick}>
       <Icon>{icon}</Icon>
